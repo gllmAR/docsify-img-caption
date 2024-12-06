@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="description" content="Docsify Ciphertext">
+    <title>Docsify Ciphertext</title>
+
+  
+    <link rel="stylesheet" href="https://gllmar.github.io/docsify-simple-style/docsify-simple-style.css">
+    <link rel="stylesheet" href="https://gllmar.github.io/docsify-lightbox/docsify-lightbox.css">
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --theme-hue:0;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        window.$docsify = {
+            name: 'Docsify img caption',
+            repo: 'https://github.com/gllmAR/docsify-img-caption',
+    
+            auto2top: true,
+            loadSidebar: false,    // disable sidebar loading
+            subMaxLevel: 4,       // Adjust the level to include in TOC
+            copyCode: {
+                buttonText: '📄',
+                errorText: '⚠️',
+                successText: '✅ ',
+            },
+            plugins: [
+                // Lightbox plugin
+                function (hook, vm) {
+                    hook.doneEach(() => {
+                        import('https://gllmar.github.io/docsify-lightbox/docsify-lightbox.js').then(module => {
+                            const images = document.querySelectorAll('img');
+                            const lightbox = new module.default();
+                            lightbox.initialize(images);
+                        }).catch(err => console.error('Failed to load Lightbox plugin', err));
+                    });
+                },
+                // WaveSurfer plugin
+                function (hook, vm) {
+                    hook.doneEach(() => {
+                        import('https://gllmar.github.io/docsify-wavesurfer-plugin/docsify-wavesurfer-plugin.js').then(module => {
+                            module.initWaveSurfer();
+                        }).catch(err => console.error('Failed to load WaveSurfer plugin', err));
+                    });
+                }
+            ]
+        };
+    </script>
+    
+
+    <!-- Required -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+    
+    <!-- Import Mermaid -->
+    <script type="module">
+        import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: "neutral"
+        });
+        window.mermaid = mermaid;
+    </script>
+    <script src="//unpkg.com/docsify-mermaid@2.0.1/dist/docsify-mermaid.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+    <script src="https://gllmar.github.io/docsify-unhashtaglink/docsify-unhashtaglink.js"></script>
+    <script src="https://gllmar.github.io/docsify-alert/docsify-alerts.js"></script>
+    <script src="https://gllmar.github.io/docsify-repo-toolbar/docsify-repo-toolbar.js"></script>
+    <script src="docsify-img-caption.js"></script>
+
+</body>
+
+</html>
