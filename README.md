@@ -3,9 +3,18 @@
 
 This Docsify plugin automatically generates captions from the `alt` text of images. It inserts a centered, italicized caption (by default) directly below each image found in the rendered documentation.
 
+
+
 ## Example
 
+### A single image 
+
 ![This is a caption from the alt text ](./image.png)
+
+### 2 images in a table 
+
+| ![This is a caption from the alt 1 ](./image.png) | ![This is a caption from the alt 2 ](./image.png) |
+| - | - | 
 
 ## Features
 
