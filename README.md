@@ -11,6 +11,10 @@ This Docsify plugin automatically generates captions from the `alt` text of imag
 
 ![This is a caption from the alt text ](./image.png)
 
+
+![This is a caption from the alt text ](./image.png)
+
+
 ### 2 images in a table 
 
 | ![This is a caption from the alt 1 ](./image.png) | ![This is a caption from the alt 2 ](./image.png) |
