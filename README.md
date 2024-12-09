@@ -3,13 +3,18 @@
 
 This Docsify plugin enhances images in your documentation by automatically adding captions derived from their `alt` attributes. By default, it wraps the image and its caption in a semantic `<figure>` and `<figcaption>` structure, making your content more accessible and aesthetically pleasing.
 
+This plugin is different than https://github.com/h-hg/docsify-image-caption since it use the the alt text field already availaible in markdown instead of introducing specific way of writing the caption that would only work with docsify. 
 
-## Example
 
-### A single image 
+See it online at this URL [https://gllmar.github.io/docsify-img-caption/#/](https://gllmar.github.io/docsify-img-caption/#/)
+
+## Examples
+
+### A single image with a caption
 
 ![This is a caption from the alt text ](./image.png)
 
+### Another single image with a caption
 
 ![This is a caption from the alt text ](./image.png)
 
