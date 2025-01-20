@@ -58,7 +58,7 @@ This Docsify plugin enhances images by automatically adding captions derived fro
 
 3. **Include the Plugin Script:**
    ```html
-   <script src="docsify-image-caption.js"></script>
+       <script src="https://gllmar.github.io/docsify-img-caption/docsify-img-caption.js"></script>
    ```
 
 ## Usage
