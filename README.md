@@ -17,11 +17,15 @@ See it online at this URL [https://gllmar.github.io/docsify-img-caption/#/](http
 
 ![This is a caption from the alt text ](./image.png)
 
-
 ### 2 images in a table 
 
 | ![This is a caption from the alt 1 ](./image.png) | ![This is a caption from the alt 2 ](./image.png) |
 | - | - | 
+
+
+### Skip caption if only one space
+
+![ ](./image.png)
 
 
 This Docsify plugin enhances images by automatically adding captions derived from their `alt` attributes and formatting them within a semantic `<figure>` and `<figcaption>` structure. It also provides configurable alignment for both images and captions.
