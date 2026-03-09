@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="280" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e8449"/>
+      <stop offset="100%" stop-color="#a9dfbf"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1d6a35"/>
+      <stop offset="100%" stop-color="#117a3b"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="280" fill="url(#sky)"/>
+  <!-- Ground -->
+  <rect y="210" width="400" height="70" fill="url(#ground)"/>
+  <!-- Trees (back row) -->
+  <polygon points="80,170 100,115 120,170" fill="#145a32" opacity="0.7"/>
+  <polygon points="140,175 163,112 186,175" fill="#1e8449" opacity="0.75"/>
+  <polygon points="220,168 244,108 268,168" fill="#145a32" opacity="0.7"/>
+  <polygon points="290,173 310,116 330,173" fill="#1e8449" opacity="0.75"/>
+  <!-- Trees (front row) -->
+  <polygon points="20,210 50,140 80,210" fill="#0b5e2a"/>
+  <polygon points="105,210 140,130 175,210" fill="#117a3b"/>
+  <polygon points="200,210 238,125 276,210" fill="#0b5e2a"/>
+  <polygon points="310,210 342,138 374,210" fill="#117a3b"/>
+  <!-- Trunks -->
+  <rect x="46" y="195" width="8" height="20" fill="#6d4c1f"/>
+  <rect x="136" y="195" width="8" height="20" fill="#6d4c1f"/>
+  <rect x="234" y="195" width="8" height="20" fill="#6d4c1f"/>
+  <rect x="338" y="195" width="8" height="20" fill="#6d4c1f"/>
+  <!-- Light rays -->
+  <line x1="200" y1="0" x2="50" y2="220" stroke="#a9dfbf" stroke-width="18" opacity="0.08"/>
+  <line x1="200" y1="0" x2="200" y2="240" stroke="#a9dfbf" stroke-width="18" opacity="0.08"/>
+  <line x1="200" y1="0" x2="350" y2="220" stroke="#a9dfbf" stroke-width="18" opacity="0.08"/>
+  <!-- Label -->
+  <text x="200" y="262" font-family="Georgia, serif" font-size="16" fill="#d5f5e3" text-anchor="middle" font-style="italic">Misty forest at dawn</text>
+</svg>

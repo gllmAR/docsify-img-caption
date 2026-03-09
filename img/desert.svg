@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="280" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2176ae"/>
+      <stop offset="100%" stop-color="#57a0d3"/>
+    </linearGradient>
+    <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0b96a"/>
+      <stop offset="100%" stop-color="#b8860b"/>
+    </linearGradient>
+    <linearGradient id="sand2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4a843"/>
+      <stop offset="100%" stop-color="#9a7209"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="400" height="160" fill="url(#sky)"/>
+  <!-- Sun -->
+  <circle cx="320" cy="55" r="34" fill="#ffe066" opacity="0.95"/>
+  <circle cx="320" cy="55" r="46" fill="#ffe066" opacity="0.12"/>
+  <!-- Dune 1 (back) -->
+  <ellipse cx="100" cy="200" rx="180" ry="55" fill="url(#sand2)"/>
+  <!-- Dune 2 (back right) -->
+  <ellipse cx="340" cy="195" rx="160" ry="50" fill="#c8972a"/>
+  <!-- Dune 3 (front) -->
+  <ellipse cx="200" cy="235" rx="240" ry="60" fill="url(#sand)"/>
+  <!-- Cactus left -->
+  <rect x="58" y="130" width="10" height="65" rx="5" fill="#2d6a2d"/>
+  <rect x="40" y="147" width="28" height="8" rx="4" fill="#2d6a2d"/>
+  <rect x="40" y="142" width="8" height="20" rx="4" fill="#2d6a2d"/>
+  <!-- Cactus right -->
+  <rect x="322" y="138" width="10" height="58" rx="5" fill="#2d6a2d"/>
+  <rect x="310" y="152" width="24" height="8" rx="4" fill="#2d6a2d"/>
+  <rect x="326" y="148" width="8" height="18" rx="4" fill="#2d6a2d"/>
+  <!-- Heat shimmer lines -->
+  <path d="M80 168 Q100 163 120 168" stroke="#f5deb3" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M200 172 Q230 167 260 172" stroke="#f5deb3" stroke-width="1" fill="none" opacity="0.4"/>
+  <!-- Label -->
+  <text x="200" y="268" font-family="Georgia, serif" font-size="16" fill="#fff8e7" text-anchor="middle" font-style="italic">Desert dunes under the sun</text>
+</svg>

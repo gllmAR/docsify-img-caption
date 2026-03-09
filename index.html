@@ -8,10 +8,18 @@
         content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
     <meta name="description" content="Docsify img caption">
     <title>Docsify img caption</title>
-
+    <link rel="stylesheet" href="https://gllmar.github.io/docsify-lightbox-v5/docsify-lightbox.css">
   
-    <link rel="stylesheet" href="https://gllmar.github.io/docsify-simple-style/docsify-simple-style.css">
-    <link rel="stylesheet" href="https://gllmar.github.io/docsify-lightbox/docsify-lightbox.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@^5.0.0-rc/dist/themes/core.min.css">
+
+    <!-- Core Dark - Dark Mode Only (add-on), to disable remove or comment out the below line -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@^5.0.0-rc/dist/themes/addons/core-dark.min.css"
+        media="(prefers-color-scheme: dark)" />
+
+    <!-- <link rel="stylesheet" href="https://gllmar.github.io/docsify-lightbox-v5/docsify-lightbox.css"> -->
+
+    <!-- <link rel="stylesheet" href="https://gllmar.github.io/docsify-simple-style/docsify-simple-style.css">
+    <link rel="stylesheet" href="https://gllmar.github.io/docsify-lightbox/docsify-lightbox.css"> -->
     <!-- Custom Styles -->
     <style>
         :root {
@@ -30,7 +38,7 @@
             repo: 'https://github.com/gllmAR/docsify-img-caption',
     
             auto2top: true,
-            loadSidebar: false,    // disable sidebar loading
+            loadSidebar: false,
             subMaxLevel: 4,       // Adjust the level to include in TOC
             copyCode: {
                 buttonText: '📄',
@@ -38,33 +46,16 @@
                 successText: '✅ ',
             },
             plugins: [
-                // Lightbox plugin
-                function (hook, vm) {
-                    hook.doneEach(() => {
-                        import('https://gllmar.github.io/docsify-lightbox/docsify-lightbox.js').then(module => {
-                            const images = document.querySelectorAll('img');
-                            const lightbox = new module.default();
-                            lightbox.initialize(images);
-                        }).catch(err => console.error('Failed to load Lightbox plugin', err));
-                    });
-                },
-                // WaveSurfer plugin
-                function (hook, vm) {
-                    hook.doneEach(() => {
-                        import('https://gllmar.github.io/docsify-wavesurfer-plugin/docsify-wavesurfer-plugin.js').then(module => {
-                            module.initWaveSurfer();
-                        }).catch(err => console.error('Failed to load WaveSurfer plugin', err));
-                    });
-                }
             ]
         };
     </script>
     
 
     <!-- Required -->
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-    
-    <!-- Import Mermaid -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/docsify@^5.0.0-rc/dist/docsify.min.js"></script>
+
+    <!-- Import Mermaid
     <script type="module">
         import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
         mermaid.initialize({ 
@@ -73,12 +64,12 @@
         });
         window.mermaid = mermaid;
     </script>
-    <script src="//unpkg.com/docsify-mermaid@2.0.1/dist/docsify-mermaid.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
     <script src="https://gllmar.github.io/docsify-unhashtaglink/docsify-unhashtaglink.js"></script>
     <script src="https://gllmar.github.io/docsify-alert/docsify-alerts.js"></script>
+         -->
     <script src="https://gllmar.github.io/docsify-repo-toolbar/docsify-repo-toolbar.js"></script>
+<script src="https://gllmar.github.io/docsify-img-grid/docsify-img-grid.js"></script>
+    <script src="https://gllmar.github.io/docsify-lightbox-v5/docsify-lightbox.js"></script>
     <script src="docsify-img-caption.js"></script>
 
 </body>

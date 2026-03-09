@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="280" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a6ea8"/>
+      <stop offset="100%" stop-color="#85c1e9"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2980b9"/>
+      <stop offset="100%" stop-color="#1a5276"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="400" height="155" fill="url(#sky)"/>
+  <!-- Clouds -->
+  <ellipse cx="100" cy="60" rx="55" ry="22" fill="white" opacity="0.85"/>
+  <ellipse cx="145" cy="52" rx="38" ry="18" fill="white" opacity="0.85"/>
+  <ellipse cx="65" cy="55" rx="32" ry="16" fill="white" opacity="0.85"/>
+  <ellipse cx="300" cy="80" rx="48" ry="18" fill="white" opacity="0.75"/>
+  <ellipse cx="338" cy="74" rx="30" ry="14" fill="white" opacity="0.75"/>
+  <!-- Sea -->
+  <rect y="155" width="400" height="125" fill="url(#sea)"/>
+  <!-- Waves -->
+  <path d="M0 170 Q40 163 80 170 Q120 177 160 170 Q200 163 240 170 Q280 177 320 170 Q360 163 400 170" stroke="white" stroke-width="2" fill="none" opacity="0.45"/>
+  <path d="M0 190 Q40 183 80 190 Q120 197 160 190 Q200 183 240 190 Q280 197 320 190 Q360 183 400 190" stroke="white" stroke-width="2" fill="none" opacity="0.35"/>
+  <path d="M0 212 Q50 205 100 212 Q150 219 200 212 Q250 205 300 212 Q350 219 400 212" stroke="white" stroke-width="1.5" fill="none" opacity="0.25"/>
+  <!-- Label -->
+  <text x="200" y="262" font-family="Georgia, serif" font-size="16" fill="#d6eaf8" text-anchor="middle" font-style="italic">Deep blue ocean</text>
+</svg>

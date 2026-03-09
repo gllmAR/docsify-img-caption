@@ -46,6 +46,10 @@
             // Create a figure and figcaption for semantic markup
             var figure = document.createElement('figure');
             var figcaption = document.createElement('figcaption');
+
+            // Make the figure fill its container (e.g. grid cell) so the image is not shrunk
+            figure.style.width = '100%';
+            figure.style.margin = '0';
             
             // Apply user-configurable styling to the figcaption
             figcaption.style.textAlign = config.textAlign;
@@ -56,6 +60,10 @@
             img.insertAdjacentElement('beforebegin', figure);
             figure.appendChild(img);
             figure.appendChild(figcaption);
+
+            // Ensure the image fills the figure
+            img.style.width = '100%';
+            img.style.maxWidth = '100%';
 
             // Apply image alignment
             applyImageAlignment(img, config.imageAlign);

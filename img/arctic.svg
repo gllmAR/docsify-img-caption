@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="280" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="60%" stop-color="#16213e"/>
+      <stop offset="100%" stop-color="#0f3460"/>
+    </linearGradient>
+    <linearGradient id="aurora1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00b4d8" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#00b4d8" stop-opacity="0.7"/>
+      <stop offset="60%" stop-color="#80ed99" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#80ed99" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="aurora2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c77dff" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#c77dff" stop-opacity="0.5"/>
+      <stop offset="70%" stop-color="#00b4d8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#00b4d8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ice" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#caf0f8"/>
+      <stop offset="100%" stop-color="#90e0ef"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="400" height="280" fill="url(#sky)"/>
+  <!-- Aurora bands -->
+  <path d="M-20 100 Q100 70 200 90 Q310 110 420 75" stroke="url(#aurora1)" stroke-width="30" fill="none" opacity="0.75"/>
+  <path d="M-20 130 Q80 105 180 125 Q290 145 420 108" stroke="url(#aurora2)" stroke-width="20" fill="none" opacity="0.55"/>
+  <path d="M-20 80 Q120 55 220 75 Q330 95 420 60" stroke="url(#aurora1)" stroke-width="14" fill="none" opacity="0.4"/>
+  <!-- Stars -->
+  <circle cx="30" cy="20" r="1.2" fill="white" opacity="0.9"/>
+  <circle cx="80" cy="10" r="1" fill="white" opacity="0.8"/>
+  <circle cx="150" cy="30" r="1.4" fill="white" opacity="0.85"/>
+  <circle cx="240" cy="15" r="1" fill="white" opacity="0.75"/>
+  <circle cx="310" cy="25" r="1.3" fill="white" opacity="0.9"/>
+  <circle cx="370" cy="12" r="1.1" fill="white" opacity="0.7"/>
+  <circle cx="50" cy="45" r="1" fill="white" opacity="0.6"/>
+  <circle cx="360" cy="42" r="1.2" fill="white" opacity="0.7"/>
+  <!-- Ice/snow ground -->
+  <rect y="220" width="400" height="60" fill="url(#ice)"/>
+  <!-- Cracks in ice -->
+  <path d="M60 225 L90 240 L75 260" stroke="#aed9e0" stroke-width="1" fill="none"/>
+  <path d="M200 230 L220 248 L210 265" stroke="#aed9e0" stroke-width="1" fill="none"/>
+  <path d="M310 222 L330 242 L320 268" stroke="#aed9e0" stroke-width="1" fill="none"/>
+  <!-- Label -->
+  <text x="200" y="270" font-family="Georgia, serif" font-size="16" fill="#caf0f8" text-anchor="middle" font-style="italic">Aurora over the arctic ice</text>
+</svg>

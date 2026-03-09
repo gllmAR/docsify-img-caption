@@ -1,97 +1,95 @@
 # docsify-img-caption
 
-This Docsify plugin enhances images in your documentation by automatically adding captions derived from their `alt` attributes. By default, it wraps the image and its caption in a semantic `<figure>` and `<figcaption>` structure, making your content more accessible and aesthetically pleasing.
+A [Docsify](https://docsify.js.org) plugin that automatically adds captions to images using their `alt` text, wrapping them in a semantic `<figure>` / `<figcaption>` structure.
 
-This plugin is different than https://github.com/h-hg/docsify-image-caption since it use the the alt text field already availaible in markdown instead of introducing specific way of writing the caption that would only work with docsify. 
+Unlike [docsify-image-caption](https://github.com/h-hg/docsify-image-caption), this plugin uses the standard Markdown `alt` attribute — no custom syntax required, so your Markdown stays portable.
 
-
-See it online at this URL [https://gllmar.github.io/docsify-img-caption/#/](https://gllmar.github.io/docsify-img-caption/#/)
-
-## Examples
-
-### A single image with a caption
-
-![This is a caption from the alt text ](./image.png)
-
-### Another single image with a caption
-
-![This is a caption from the alt text ](./image.png)
-
-### 2 images in a table 
-
-| ![This is a caption from the alt 1 ](./image.png) | ![This is a caption from the alt 2 ](./image.png) |
-| - | - | 
-
-
-### Skip caption if only one space
-
-![ ](./image.png)
-
-
-This Docsify plugin enhances images by automatically adding captions derived from their `alt` attributes and formatting them within a semantic `<figure>` and `<figcaption>` structure. It also provides configurable alignment for both images and captions.
+**Demo:** [https://gllmar.github.io/docsify-img-caption/](https://gllmar.github.io/docsify-img-caption/#/)
 
 ## Features
 
-- **Automatic Captions:** Uses the `alt` text of each image as a caption.
-- **Semantic Markup:** Wraps images in `<figure>`/`<figcaption>` by default.
-- **Flexible Styling:** Override the text alignment, font style of captions, and image alignment independently.
-- **Fallback Mode:** Disable the figure/figcaption wrapper if needed.
+- **Automatic captions** from standard Markdown `alt` text
+- **Semantic markup** — images are wrapped in `<figure>` / `<figcaption>`
+- **Size-aware** — the figure fills its container (works correctly inside grids, tables, and lists)
+- **Configurable** — control caption alignment, font style, and image alignment
+- **Skip caption** — use a single space as `alt` to render the image without a caption
+
+## Examples
+
+### Single image with a caption
+
+![Sunset over the ocean](./img/sunset.svg)
+
+### Two images in a table
+
+| ![Snow-capped peaks at night](./img/mountain.svg) | ![Aurora over the arctic ice](./img/arctic.svg) |
+| - | - |
+
+### Caption in a list
+
+* ![Sunset over the ocean](./img/sunset.svg)
+* ![Deep blue ocean](./img/ocean.svg)
+* ![Misty forest at dawn](./img/forest.svg)
+* ![Desert dunes under the sun](./img/desert.svg)
+
+### Skip caption with a single space
+
+![ ](./img/mountain.svg)
 
 ## Installation
 
-1. **Include Docsify:**
+1. **Include Docsify** (v5 recommended):
    ```html
-   <script src="https://unpkg.com/docsify/lib/docsify.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/docsify@^5.0.0-rc/dist/docsify.min.js"></script>
    ```
 
-2. **Optional Configuration:**
-   Before including the plugin, you can set `window.$docsify.imageCaption` to override defaults:
+2. **Include the plugin:**
+   ```html
+   <script src="https://gllmar.github.io/docsify-img-caption/docsify-img-caption.js"></script>
+   ```
+
+3. **Optional configuration** — set `imageCaption` in your `$docsify` config before the plugin loads:
    ```html
    <script>
      window.$docsify = {
        name: 'My Documentation',
        imageCaption: {
-         textAlign: 'left',     // Caption alignment (default: 'center')
-         fontStyle: 'normal',   // Caption font style (default: 'italic')
-         wrapInFigure: true,    // Use figure/figcaption (default: true)
-         imageAlign: 'right'    // Image alignment: 'left', 'center', or 'right' (default: 'center')
+         textAlign: 'center',   // Caption alignment: 'left', 'center', 'right' (default: 'center')
+         fontStyle: 'italic',   // Caption font style: 'normal', 'italic', etc. (default: 'italic')
+         wrapInFigure: true,    // Use <figure>/<figcaption> wrapper (default: true)
+         imageAlign: 'center'   // Image alignment: 'left', 'center', 'right' (default: 'center')
        }
      };
    </script>
    ```
 
-3. **Include the Plugin Script:**
-   ```html
-       <script src="https://gllmar.github.io/docsify-img-caption/docsify-img-caption.js"></script>
-   ```
-
 ## Usage
 
-In your Markdown, simply write:
+Write standard Markdown:
 ```markdown
 ![Elephant at sunset](images/elephant.jpg)
 ```
 
-The plugin will convert this to:
+The plugin renders it as:
 ```html
-<figure>
-  <img src="images/elephant.jpg" alt="Elephant at sunset" style="display:block; margin:0 auto;">
+<figure style="width:100%; margin:0;">
+  <img src="images/elephant.jpg" alt="Elephant at sunset" style="width:100%; max-width:100%; display:block; margin:0 auto;">
   <figcaption style="text-align:center; font-style:italic;">Elephant at sunset</figcaption>
 </figure>
 ```
 
 ## Configuration Options
 
-| Option        | Default   | Description                                                                 |
-|---------------|-----------|-----------------------------------------------------------------------------|
-| `wrapInFigure`| `true`    | Wraps image and caption in `<figure>`/`<figcaption>` if `true`.              |
-| `textAlign`   | `center`  | Aligns caption text (`left`, `center`, `right`).                            |
-| `fontStyle`   | `italic`  | Sets the caption text style (`normal`, `italic`, etc.).                     |
-| `imageAlign`  | `center`  | Aligns the image horizontally (`left`, `center`, `right`).                  |
+| Option        | Default    | Description                                                        |
+|---------------|------------|--------------------------------------------------------------------|
+| `wrapInFigure`| `true`     | Wrap image and caption in `<figure>`/`<figcaption>`.               |
+| `textAlign`   | `'center'` | Caption text alignment: `'left'`, `'center'`, or `'right'`.        |
+| `fontStyle`   | `'italic'` | Caption font style: `'normal'`, `'italic'`, etc.                   |
+| `imageAlign`  | `'center'` | Image horizontal alignment: `'left'`, `'center'`, or `'right'`.    |
 
-## Styling
+## Custom Styling
 
-You can further customize the appearance with your own CSS:
+Override the default appearance with CSS:
 ```css
 figure {
   margin: 1em 0;
@@ -103,9 +101,7 @@ figcaption {
 }
 ```
 
-Adjust these styles as needed to fit your branding and layout requirements.
-
 ## License
 
-This plugin is provided under the [MIT License](LICENSE). Modify and adapt it to your needs.
+[MIT](LICENSE)
 
